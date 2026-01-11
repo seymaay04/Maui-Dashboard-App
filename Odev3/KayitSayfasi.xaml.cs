@@ -90,11 +90,9 @@ public partial class KayitSayfasi : ContentPage
 
                 string base64String = Convert.ToBase64String(imageBytes);
 
-                // DÜZELTME:
-                yeniKullanici.Resim = $"kisi_{yeniKullanici.Id}.jpg"; // Sadece isim
-                yeniKullanici.ResimData = base64String;             // Gerçek veri
+                yeniKullanici.Resim = $"kisi_{yeniKullanici.Id}.jpg";
+                yeniKullanici.ResimData = base64String;
 
-                // Ekranda göstermek için geçici yolu kullan
                 ProfilResmiGoster.Source = ImageSource.FromFile(photo.FullPath);
             }
         }
