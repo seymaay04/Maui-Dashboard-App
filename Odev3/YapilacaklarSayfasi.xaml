@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3.YapilacaklarSayfasi"
+             Title="Yapılacaklar">
+
+    <Grid RowDefinitions="Auto, *">
+
+        <Grid Grid.Row="0" BackgroundColor="#5FBB9C" Padding="15" ColumnDefinitions="*, Auto, Auto">
+            <Label Text="Listem" TextColor="White" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+
+            <Button Grid.Column="1" Text="+" TextColor="White" BackgroundColor="Transparent" FontSize="25" Clicked="Ekle_clk" Margin="0,0,10,0"/>
+
+            <Button Grid.Column="2" Text="⟳" TextColor="White" BackgroundColor="Transparent" FontSize="25" Clicked="Yenile_clk"/>
+        </Grid>
+
+        <CollectionView x:Name="cvGorevler" Grid.Row="1" Margin="10">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="10" BorderColor="#E0E0E0" CornerRadius="8" HasShadow="True" BackgroundColor="White">
+                        <Grid ColumnDefinitions="Auto, *, Auto, Auto">
+
+                            <CheckBox Grid.Column="0" IsChecked="{Binding YapildiMi}" Color="#5FBB9C" CheckedChanged="CheckBox_CheckedChanged"/>
+
+                            <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center" Margin="10,0,0,0">
+                                <Label Text="{Binding Baslik}" FontSize="16" FontAttributes="Bold" TextColor="#333"/>
+                                <Label Text="{Binding Detay}" FontSize="12" TextColor="Gray"/>
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="{Binding Tarih}" FontSize="10" TextColor="Gray"/>
+                                    <Label Text="{Binding Saat}" FontSize="10" TextColor="Gray"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+
+                            <Button Grid.Column="2" Text="Düzenle" TextColor="#5FBB9C" BackgroundColor="Transparent" 
+                                    FontSize="20" Clicked="Duzenle_clk" 
+                                    CommandParameter="{Binding .}"/>
+
+                            <Button Grid.Column="3" Text="Sil" TextColor="Red" BackgroundColor="Transparent" 
+                                    FontSize="18" Clicked="Sil_clk" 
+                                    CommandParameter="{Binding .}"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

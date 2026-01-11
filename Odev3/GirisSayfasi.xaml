@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3.GirisSayfasi"
+             Title="GirisSayfasi">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#69D5ED" Offset="0.0" />
+            <GradientStop Color="#C7F08D" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+
+    <Border BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" StrokeShape="RoundRectangle 40" Padding="20">
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10" Margin="10">
+            <Label Text="Giriş Yap" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label  Text="Mail Giriniz:" FontSize="15" TextColor="Black"/>
+                <Entry x:Name="MailGiris" Placeholder="Email adresinizi giriniz" Keyboard="Email" TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label  Text="Şifre Giriniz:" FontSize="15" TextColor="Black"/>
+                <Entry x:Name="SifreGiris" Placeholder="Şifrenizi giriniz" IsPassword="True" Keyboard="Password" TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <Button Text="Giriş Yap" Clicked="Giris_clk" BackgroundColor="#5FBB9C" TextColor="White"/>
+            <Button Text="Hesabın yoksa, yeni bir hesap oluştur." BackgroundColor="Transparent" TextColor="#5FBB9C" Clicked="KayitButon_clk" />
+        </VerticalStackLayout>
+    </Border>
+
+</ContentPage>
+

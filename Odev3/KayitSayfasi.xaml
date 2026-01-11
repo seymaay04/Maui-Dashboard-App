@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3.KayitSayfasi"
+             Title="Kayıt Ol">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#69D5ED" Offset="0.0" />
+            <GradientStop Color="#C7F08D" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+
+    <Border BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" StrokeShape="RoundRectangle 40" Padding="20">
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10" Margin="10">
+            <Label Text="Kayıt Ol" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+
+                <Border StrokeShape="RoundRectangle 60" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" StrokeThickness="2">
+                    <Image x:Name="ProfilResmiGoster" Source="user.png" Aspect="AspectFill" />
+                </Border>
+                <Button Text="Fotoğraf Ekle" Clicked="ResimSec_Clicked" BackgroundColor="#5FBB9C" TextColor="White" HeightRequest="40" WidthRequest="150"/>
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label  Text="Adınızı giriniz:" FontSize="15" TextColor="Black"/>
+                <Entry x:Name="AdGiris" Placeholder="Adınızı giriniz" TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label  Text="Soyadınızı giriniz:" FontSize="15" TextColor="Black"/>
+                <Entry x:Name="SoyadGiris" Placeholder="Soyadınızı giriniz" TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label  Text="Öğrenci numaranızı giriniz:" FontSize="15" TextColor="Black"/>
+                <Entry x:Name="NoGiris" Placeholder="Öğrenci numaranızı giriniz" Keyboard="Numeric" TextColor="Black"/>
+            </VerticalStackLayout>
+            
+            <VerticalStackLayout Spacing="5">
+                <Label  Text="Mail Giriniz:" FontSize="15" TextColor="Black"/>
+                <Entry x:Name="MailGiris" Placeholder="Email adresinizi giriniz" Keyboard="Email" TextColor="Black"/>
+            </VerticalStackLayout>
+            
+
+            <VerticalStackLayout Spacing="5">
+                <Label  Text="Şifre Giriniz:" FontSize="15" TextColor="Black"/>
+                <Entry x:Name="SifreGiris" Placeholder="Şifrenizi giriniz" IsPassword="True" Keyboard="Password" TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Kaydol" Clicked="Kaydol_clk" BackgroundColor="#5FBB9C" TextColor="White"/>
+                <Button Text="Giriş Yap" Clicked="Giris_clk" BackgroundColor="#5FBB9C" TextColor="White"/>
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+    </Border>
+
+</ContentPage>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Odev3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Odev3"
+    Title="Odev3"
+    
+    Shell.BackgroundColor="{AppThemeBinding Light=White, Dark=#1F1F1F}"
+    Shell.TitleColor="{AppThemeBinding Light=Black, Dark=White}"
+    Shell.ForegroundColor="{AppThemeBinding Light=Black, Dark=White}">>
+
+    <ShellContent
+        Title="Ana Sayfa"
+        ContentTemplate="{DataTemplate local:AnaSayfa}"
+        Route="AnaSayfa" />
+
+    <ShellContent
+        Title="Kurlar"
+        ContentTemplate="{DataTemplate local:KurlarSayfasi}"
+        Route="Kurlar" />
+
+    <ShellContent
+        Title="Haberler"
+        ContentTemplate="{DataTemplate local:HaberlerSayfasi}"
+        Route="Haberler" />
+
+    <ShellContent
+        Title="Hava Durumu"
+        ContentTemplate="{DataTemplate local:HavaDurumuSayfasi}"
+        Route="HavaDurumu" />
+
+    <ShellContent
+        Title="Yapılacaklar"
+        ContentTemplate="{DataTemplate local:YapilacaklarSayfasi}"
+        Route="Yapılacaklar" />
+
+    <ShellContent
+        Title="Ayarlar"
+        ContentTemplate="{DataTemplate local:AyarlarSayfasi}"
+        Route="Ayarlar" />
+
+</Shell>

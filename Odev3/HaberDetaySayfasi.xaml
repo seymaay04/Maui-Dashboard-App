@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3.HaberDetaySayfasi"
+             Title="Haber Detayı">
+
+    <Grid RowDefinitions="Auto, *">
+
+        <Grid Grid.Row="0" BackgroundColor="#5FBB9C" Padding="10" ColumnDefinitions="*, Auto">
+            <Button Grid.Column="1" Text="Paylaş" BackgroundColor="White" TextColor="#5FBB9C"  Clicked="Paylas_clk"/>
+        </Grid>
+
+        <WebView x:Name="webViewHaber" Grid.Row="1"/>
+
+    </Grid>
+</ContentPage>
