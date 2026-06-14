@@ -5,7 +5,8 @@ Bu proje, C# ve .NET MAUI platformu kullanılarak geliştirilmiş, çok sayfalı
 ## Proje İçeriği
 
 * **Kimlik Doğrulama:** Kullanıcı giriş ve kayıt işlemleri `FirebaseAuthentication.net` kullanılarak güvenli bir şekilde sağlanmıştır.
-* **API Entegrasyonları:** * **Döviz Kurları:** Canlı döviz kurları REST API üzerinden çekilerek anlık güncellenmektedir.
+* **API Entegrasyonları:**
+  * **Döviz Kurları:** Canlı döviz kurları REST API üzerinden çekilerek anlık güncellenmektedir.
   * **Hava Durumu:** Meteoroloji (MGM) API'si kullanılarak hava durumu verileri çekilmekte, kullanıcının eklediği şehirler yerel cihaza JSON formatında kaydedilerek veri kalıcılığı sağlanmaktadır.
 * **RSS Veri İşleme (Haberler):** TRT Haber RSS kaynakları parse edilerek kategorize edilmiş, haber detayları ve `Share API` ile haberi farklı platformlarda paylaşma özelliği eklenmiştir.
 * **Veritabanı Destekli To-Do List:** Kullanıcıların görev ekleyip silebildiği "Yapılacaklar" modülü doğrudan uzak veritabanı (Firebase) ile senkronize çalışmaktadır. Ayrıca veri güvenliği için silme işlemlerinde kullanıcı onay mekanizması eklenmiştir.
